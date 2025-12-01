@@ -14,7 +14,7 @@ i18n
       eus: { translation: eus },
       en: { translation: en },
     },
-    lng: "eus", // idioma inicial
+    lng: "en", // idioma inicial
     interpolation: {
       escapeValue: false,
     },

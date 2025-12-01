@@ -1,33 +1,53 @@
 // src/pages/Home/Home.js
 
-import { useState, useMemo } from "react";
+import { useState } from "react";
 import "./Prediction.css";
 import DailyChart from "../../components/DailyChart/DailyChart";
 import useEnergyData from "../../hooks/getEnergyData"; // 1. Importar nuestro nuevo hook
 import { useTranslation } from "react-i18next";
+import DateSelector from "../../components/DateSelector/DateSelector";
 
 const Home = () => {
-  // El único estado que maneja 'Home' es la opción seleccionada
-  const [duration, setDuration] = useState(2);
+  // Estado para el rango que se enviará a la API (simplificado: hoy 00:00 -> mañana 00:00)
+  const today = new Date();
+  const todayStr = today.toISOString().slice(0, 10); // YYYY-MM-DD
+  const tomorrow = new Date(today);
+  tomorrow.setDate(today.getDate() + 1);
+  const tomorrowStr = tomorrow.toISOString().slice(0, 10);
+
+  const [apiRange, setApiRange] = useState({
+    fecha_inicio: `${todayStr} 00:00:00`,
+    fecha_fin: `${tomorrowStr} 00:00:00`,
+  });
   const { t } = useTranslation();
 
-  // 2. Usamos el hook para obtener datos desde la API (ahora requiere options)
+  // 2. Usamos el hook para obtener datos desde la API (ahora con fechas dinámicas)
   const { data, chargePeriod, dischargePeriod, isLoading, error } =
     useEnergyData({
       tabla: "V1_predicted_data",
       variable: "predicted_omie_price_eur_mw",
-      fecha_inicio: "2025-11-25 00:00:00",
-      fecha_fin: "2025-11-26 00:00:00",
+      fecha_inicio: apiRange.fecha_inicio,
+      fecha_fin: apiRange.fecha_fin,
     });
 
-  const handleDurationChange = (e) => {
-    setDuration(Number(e.target.value));
+  const handleRangeChange = (range) => {
+    if (
+      range.fecha_inicio !== apiRange.fecha_inicio ||
+      range.fecha_fin !== apiRange.fecha_fin
+    ) {
+      setApiRange(range);
+    }
   };
 
   return (
     <div className="home-container">
+      <DateSelector
+        onChange={handleRangeChange}
+        initialDate={apiRange.fecha_inicio.slice(0, 10)}
+      />
+
       {isLoading ? (
-        <p>{t("prediction.loading")}</p>
+        <p>{t("home.loading")}</p>
       ) : error ? (
         <p className="error">{error}</p>
       ) : (

@@ -1,42 +1,35 @@
 // src/pages/Home/Home.js
 
-import { useState, useMemo } from "react";
 import "./Home.css";
-import DailyChart from "../../components/DailyChart/DailyChart";
-import useEnergyData from "../../hooks/getEnergyData"; // 1. Importar nuestro nuevo hook
 import { useTranslation } from "react-i18next";
 
 const Home = () => {
-  // El único estado que maneja 'Home' es la opción seleccionada
-  const [duration, setDuration] = useState(2);
   const { t } = useTranslation();
 
-  // 2. Usamos el hook para obtener datos desde la API (ahora requiere options)
-  const { data, chargePeriod, dischargePeriod, isLoading, error } =
-    useEnergyData({
-      tabla: "V1_predicted_data",
-      variable: "predicted_omie_price_eur_mw",
-      fecha_inicio: "2025-11-25 00:00:00",
-      fecha_fin: "2025-11-26 00:00:00",
-    });
-
-  const handleDurationChange = (e) => {
-    setDuration(Number(e.target.value));
-  };
-
   return (
-    <div className="home-container">
-      {isLoading ? (
-        <p>{t("home.loading")}</p>
-      ) : error ? (
-        <p className="error">{error}</p>
-      ) : (
-        <DailyChart
-          data={data}
-          chargePeriod={chargePeriod}
-          dischargePeriod={dischargePeriod}
-        />
-      )}
+    <div className="home-hero">
+      <div className="overlay" />
+      <div className="hero-content">
+        <h1>{t("home.title")}</h1>
+        <p className="tagline">{t("home.tagline")}</p>
+
+        <p className="description">{t("home.description")}</p>
+
+        <ul className="features">
+          <li>{t("home.feature_1")}</li>
+          <li>{t("home.feature_2")}</li>
+          <li>{t("home.feature_3")}</li>
+        </ul>
+
+        <div className="cta-row">
+          <a className="btn primary" href="/home">
+            {t("home.cta_explore")}
+          </a>
+          <a className="btn secondary" href="/about">
+            {t("home.cta_about")}
+          </a>
+        </div>
+      </div>
     </div>
   );
 };

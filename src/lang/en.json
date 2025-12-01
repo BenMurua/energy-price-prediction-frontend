@@ -1,7 +1,12 @@
 {
   "header": {
     "logo": "⚡ EnergyPredict",
-    "precios": "Prices",
+    "pages":{
+      "prediction": "Prediction",
+      "historic": "Historic",
+      "stadistics": "Stadistics",
+      "about": "About"
+    },
     "graficas": "Charts",
     "contacto": "Contact",
     "theme": {
@@ -17,6 +22,18 @@
     "select_charge_discharge_duration": "Select charge/discharge duration (hours):",
     "hour": "hour",
     "loading": "Loading data..."
+  },
+  "home": {
+    "title": "Energy Forecast Pro",
+    "tagline": "Accurate energy price predictions to optimize your decisions",
+    "description": "Energy Forecast Pro combines advanced predictive models and an intuitive interface to help you plan energy purchases, storage and usage. Visualize prices by intervals, find the cheapest hours to charge batteries and optimize costs with clear, actionable recommendations.",
+    "features_title": "Features",
+    "feature_1": "Predictions at 15-minute intervals",
+    "feature_2": "Support for custom ranges",
+    "feature_3": "Clear, exportable visualizations",
+    "feature_4": "Actionable charging/discharging recommendations",
+    "cta_explore": "Explore predictions",
+    "cta_about": "Learn more"
   },
 
   

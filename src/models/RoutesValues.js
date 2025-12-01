@@ -1,9 +1,9 @@
 export const RoutesValues = {
   app: "/",   
   about: "/about",
-  products: "/products",
-  contact: "/contact",
-  home: "/home",
+  historic: "/historic",
+  prediction: "/prediction",
+  stadistics: "/stadistics",
   notFound: "*",
   // Add more routes as needed
 };

@@ -1,0 +1,88 @@
+/* Hero/home page styles */
+.home-hero {
+	position: relative;
+	min-height: 70vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #ffffff;
+	background-image: url('/assets/hero-bg.jpg');
+	background-size: cover;
+	background-position: center;
+}
+
+.home-hero .overlay {
+	position: absolute;
+	inset: 0;
+	background: rgba(0,0,0,0.45);
+}
+
+.hero-content {
+	position: relative;
+	max-width: 900px;
+	padding: 48px;
+	text-align: left;
+}
+
+.hero-content h1 {
+	font-size: 2.5rem;
+	margin: 0 0 12px 0;
+}
+
+.tagline {
+	font-size: 1.125rem;
+	margin-bottom: 18px;
+	color: #dfefff;
+}
+
+.description {
+	line-height: 1.6;
+	margin-bottom: 18px;
+	color: #e6f0ff;
+}
+
+.features {
+	list-style: none;
+	padding: 0;
+	margin: 0 0 22px 0;
+	display: flex;
+	gap: 18px;
+}
+
+.features li {
+	background: rgba(255,255,255,0.08);
+	padding: 8px 12px;
+	border-radius: 6px;
+}
+
+.cta-row {
+	display: flex;
+	gap: 12px;
+	margin-top: 10px;
+}
+
+.btn {
+	display: inline-block;
+	padding: 10px 16px;
+	border-radius: 6px;
+	text-decoration: none;
+	color: inherit;
+}
+
+.btn.primary {
+	background: linear-gradient(90deg,#0066ff,#00aaff);
+	color: #fff;
+}
+
+.btn.secondary {
+	background: rgba(255,255,255,0.12);
+	color: #fff;
+}
+
+/* Responsive tweaks */
+@media (max-width: 700px) {
+	.hero-content { padding: 20px; }
+	.home-hero { min-height: 60vh; }
+	.features { flex-direction: column; }
+}
+

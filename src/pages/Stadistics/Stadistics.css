@@ -1,0 +1,11 @@
+.stadistics-page {
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stadistics-page h2 {
+  font-size: 2rem;
+  color: #333;
+}

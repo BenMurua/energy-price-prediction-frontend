@@ -44,9 +44,16 @@ export default function Header() {
 
       <nav className={menuOpen ? "open" : ""}>
         {/* Usamos NavLink con la prop "to" */}
-        <NavLink to={RoutesValues.precios}>{t("header.precios")}</NavLink>
-        <NavLink to={RoutesValues.graficas}>{t("header.graficas")}</NavLink>
-        <NavLink to={RoutesValues.contacto}>{t("header.contacto")}</NavLink>
+        <NavLink to={RoutesValues.prediction}>
+          {t("header.pages.prediction")}
+        </NavLink>
+        <NavLink to={RoutesValues.historic}>
+          {t("header.pages.historic")}
+        </NavLink>
+        <NavLink to={RoutesValues.stadistics}>
+          {t("header.pages.stadistics")}
+        </NavLink>
+        <NavLink to={RoutesValues.home}>{t("header.pages.about")}</NavLink>
       </nav>
 
       <button className="theme-toggle" onClick={toggleTheme}>

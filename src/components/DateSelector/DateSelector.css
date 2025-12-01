@@ -1,0 +1,29 @@
+/* Styles for DateSelector component */
+.date-selector {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	max-width: 420px;
+}
+
+.date-selector .row {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.date-selector .label {
+	width: 110px;
+	font-weight: 600;
+}
+
+.date-selector input[type="date"],
+.date-selector input[type="datetime-local"] {
+	padding: 6px 8px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+.date-selector .checkbox-row {
+	margin-left: 2px;
+}
