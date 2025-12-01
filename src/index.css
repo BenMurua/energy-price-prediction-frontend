@@ -1,0 +1,33 @@
+/* ⚡ Estilos generales con inspiración renovable */
+body {
+  background-color: var(--background);
+  color: var(--text);
+  font-family: 'Poppins', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ☀️ Modo Claro */
+:root {
+  --background: #F4FAF7;      /* verde muy claro */
+  --text: #2D3A2F;            /* verde bosque */
+  --card: #FFFFFF;            /* blanco */
+  --border: #CCE3D2;          /* verde suave */
+  --primary: #4CAF50;         /* verde renovable */
+  --primary-hover: #3C8C41;   /* verde más oscuro */
+  --button-text: #FFFFFF;     /* blanco */
+  --secondary: #2196F3;       /* azul energía solar/eólica */
+  --secondary-hover: #1769AA; /* azul más profundo */
+}
+
+/* 🌙 Modo Oscuro */
+[data-theme="dark"] {
+  --background: #101B13;      /* verde oscuro casi negro */
+  --text: #E8F5E9;            /* verde muy claro */
+  --card: #18241C;            /* verde profundo */
+  --border: #2A3B2E;          /* verde grisáceo */
+  --primary: #66BB6A;         /* verde brillante */
+  --primary-hover: #4C8C52;   /* verde más sobrio */
+  --button-text: #E8F5E9;     /* verde claro */
+  --secondary: #64B5F6;       /* azul brillante */
+  --secondary-hover: #1E88E5; /* azul fuerte */
+}

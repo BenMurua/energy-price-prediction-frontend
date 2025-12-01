@@ -1,0 +1,20 @@
+{
+  "header": {
+    "logo": "⚡ EnergyPredict",
+    "precios": "Precios",
+    "graficas": "Gráficas",
+    "contacto": "Contacto",
+    "theme": {
+      "light": "🌙",
+      "dark": "☀️"
+    },
+    "language": "Idioma"
+  },
+  "home": {
+    "welcome": "Bienvenido a EnergyPredict",
+    "description": "Predicción de precios de electricidad de forma clara y renovable."
+  },
+  "footer": {
+    "copyright": "© 2025 EnergyPredict. Todos los derechos reservados."
+  }
+}

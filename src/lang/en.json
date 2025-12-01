@@ -1,0 +1,26 @@
+{
+  "header": {
+    "logo": "⚡ EnergyPredict",
+    "precios": "Prices",
+    "graficas": "Charts",
+    "contacto": "Contact",
+    "theme": {
+      "light": "🌙",
+      "dark": "☀️"
+    },
+    "language": "Language"
+  },
+  "prediction": {
+    "welcome": "Welcome to EnergyPredict",
+    "description": "Electricity price prediction clearly and sustainably.",
+    "select_day": "Select a day to view OMIE energy prices:",
+    "select_charge_discharge_duration": "Select charge/discharge duration (hours):",
+    "hour": "hour",
+    "loading": "Loading data..."
+  },
+
+  
+  "footer": {
+    "copyright": "© 2025 EnergyPredict. All rights reserved."
+  }
+}

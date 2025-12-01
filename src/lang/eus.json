@@ -1,0 +1,20 @@
+{
+  "header": {
+    "logo": "⚡ EnergyPredict",
+    "precios": "Prezioak",
+    "graficas": "Grafikoak",
+    "contacto": "Kontaktua",
+    "theme": {
+      "light": "🌙",
+      "dark": "☀️"
+    },
+    "language": "Hizkuntza"
+  },
+  "home": {
+    "welcome": "Ongietorria EnergyPredict-era",
+    "description": "Elektrizitate prezioen aurreikuspena modu argi eta iraunkorrean."
+  },
+  "footer": {
+    "copyright": "© 2025 EnergyPredict. Eskubide guztiak erreserbatuta."
+  }
+}

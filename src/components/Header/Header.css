@@ -1,0 +1,114 @@
+/* 🌱 Header */
+header {
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  color: var(--button-text);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo */
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--button-text);
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+/* Navegación (desktop) */
+header nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+header nav a {
+  color: var(--button-text);
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.3s ease;
+}
+
+header nav a:hover {
+  opacity: 0.8;
+}
+
+/* Botón tema */
+header .theme-toggle {
+  background: transparent;
+  border: 2px solid var(--button-text);
+  color: var(--button-text);
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+header .theme-toggle:hover {
+  background-color: var(--button-text);
+  color: var(--primary);
+}
+
+/* Botón hamburguesa (oculto en desktop) */
+header .menu-toggle {
+  display: none;
+  font-size: 1.6rem;
+  background: transparent;
+  border: none;
+  color: var(--button-text);
+  cursor: pointer;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  header {
+    flex-wrap: wrap;
+  }
+
+  /* Ocultar navegación por defecto en móvil */
+  header nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem 0;
+    background: var(--background);
+    border-top: 1px solid var(--border);
+  }
+
+  /* Mostrar cuando está abierto */
+  header nav.open {
+    display: flex;
+  }
+
+  /* Botón hamburguesa visible en móvil */
+  header .menu-toggle {
+    display: block;
+  }
+}
+
+
+/* Desplegable de idiomas */
+.lang-select {
+  background-color: var(--secondary);
+  color: var(--button-text);
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  margin-left: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.lang-select:hover,
+.lang-select:focus {
+  background-color: var(--secondary-hover);
+  outline: none;
+}
