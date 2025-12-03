@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./header.css";
+import "./Header.css";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
