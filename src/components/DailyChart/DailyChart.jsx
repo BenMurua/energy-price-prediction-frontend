@@ -1,6 +1,6 @@
 // src/components/DailyChart/DailyChart.js
 
-import "./dailyChart.css";
+import "./DailyChart.css";
 import { useTranslation } from "react-i18next";
 
 import {
