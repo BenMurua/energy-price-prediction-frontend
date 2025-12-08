@@ -32,7 +32,7 @@ export default function DateSelector({ onChange, initialDate }) {
 
   return (
     <div className="date-selector">
-      <label className="label">Día a predecir</label>
+      <label className="label"></label>
       <input type="date" value={day} onChange={(e) => setDay(e.target.value)} />
     </div>
   );

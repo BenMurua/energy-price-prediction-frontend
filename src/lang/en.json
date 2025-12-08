@@ -21,7 +21,13 @@
     "select_day": "Select a day to view OMIE energy prices:",
     "select_charge_discharge_duration": "Select charge/discharge duration (hours):",
     "hour": "hour",
-    "loading": "Loading data..."
+    "loading": "Loading data...",
+    "predictedPrice": "Predicted Price",
+    "realPrice": "Real Price",
+    "chargeLabel": "Charge",
+    "dischargeLabel": "Discharge",
+    "optimalChargeLabel": "Optimal Charge",
+    "optimalDischargeLabel": "Optimal Discharge"
   },
   "home": {
     "title": "Energy Forecast Pro",
@@ -38,6 +44,22 @@
 
   
   "footer": {
-    "copyright": "© 2025 EnergyPredict. All rights reserved."
+    "copyright": "© 2025 EnergyPredict. All rights reserved.",
+    "poweredby": "Powered by EnergyPredict",
+    "contact": "Contact: info@energypredict.com"
+  },
+  "historic": {
+    "welcome": "Welcome to the Historic Data Viewer",
+    "description": "Explore past electricity prices and trends.",
+    "select_day": "Select a day to view historic OMIE prices:",
+    "select_charge_discharge_duration": "Select charge/discharge duration (hours):",
+    "hour": "hour",
+    "loading": "Loading historic data...",
+    "predictedPrice": "Predicted Price",
+    "realPrice": "Real Price"
+  },
+  "SelectSystemDuration": {
+    "label": "Select System Duration (hours):"
   }
+  
 }

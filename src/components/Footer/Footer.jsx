@@ -5,8 +5,16 @@ export default function Footer() {
   const { t } = useTranslation();
 
   return (
-    <footer>
+    <footer className="footer">
       <p>{t("footer.copyright")}</p>
+      <p>
+        {t("footer.poweredby", { defaultValue: "Powered by EnergyPredict" })}
+      </p>
+      <p>
+        {t("footer.contact", {
+          defaultValue: "Contact: info@energypredict.com",
+        })}
+      </p>
     </footer>
   );
 }

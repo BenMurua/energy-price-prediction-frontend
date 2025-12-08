@@ -1,7 +1,12 @@
 {
   "header": {
     "logo": "⚡ EnergyPredict",
-    "precios": "Precios",
+    "pages": {
+      "prediction": "Predicción",
+      "historic": "Histórico",
+      "stadistics": "Estadísticas",
+      "about": "Acerca de"
+    },
     "graficas": "Gráficas",
     "contacto": "Contacto",
     "theme": {
@@ -10,11 +15,49 @@
     },
     "language": "Idioma"
   },
-  "home": {
+  "prediction": {
     "welcome": "Bienvenido a EnergyPredict",
-    "description": "Predicción de precios de electricidad de forma clara y renovable."
+    "description": "Predicción del precio de la electricidad de forma clara y sostenible.",
+    "select_day": "Selecciona un día para ver los precios de OMIE:",
+    "select_charge_discharge_duration": "Selecciona la duración de carga/descarga (horas):",
+    "hour": "Hora",
+    "loading": "Cargando datos...",
+    "predictedPrice": "Precio Predicho",
+    "realPrice": "Precio Real",
+    "chargeLabel": "Carga",
+    "dischargeLabel": "Descarga",
+    "optimalChargeLabel": "Carga Óptima",
+    "optimalDischargeLabel": "Descarga Óptima"
+  },
+  "home": {
+    "title": "Energy Forecast Pro",
+    "tagline": "Predicciones precisas para optimizar tus decisiones",
+    "description": "Energy Forecast Pro combina modelos predictivos avanzados y una interfaz intuitiva para ayudarte a planificar compras, almacenamiento y uso de energía. Visualiza precios por intervalos, encuentra las horas más baratas para cargar baterías y optimiza costes con recomendaciones claras y accionables.",
+    "features_title": "Características",
+    "feature_1": "Predicciones en intervalos de 15 minutos",
+    "feature_2": "Soporte para rangos personalizados",
+    "feature_3": "Visualizaciones claras y exportables",
+    "feature_4": "Recomendaciones de carga/descarga accionables",
+    "cta_explore": "Explorar predicciones",
+    "cta_about": "Saber más"
   },
   "footer": {
-    "copyright": "© 2025 EnergyPredict. Todos los derechos reservados."
+    "copyright": "© 2025 EnergyPredict. Todos los derechos reservados.",
+    "poweredby": "Desarrollado por EnergyPredict",
+    "contact": "Contacto: info@energypredict.com"
+  },
+  "historic": {
+    "welcome": "Bienvenido al visor de datos históricos",
+    "description": "Explora precios y tendencias eléctricas pasadas.",
+    "select_day": "Selecciona un día para ver precios históricos de OMIE:",
+    "select_charge_discharge_duration": "Selecciona la duración de carga/descarga (horas):",
+    "hour": "Hora",
+    "loading": "Cargando datos históricos...",
+    "predictedPrice": "Precio Predicho",
+    "realPrice": "Precio Real",
+    "chargeLabel": "Carga",
+    "dischargeLabel": "Descarga",
+    "optimalChargeLabel": "Carga Óptima",
+    "optimalDischargeLabel": "Descarga Óptima"
   }
 }

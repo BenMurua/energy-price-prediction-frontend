@@ -1,7 +1,12 @@
 {
   "header": {
     "logo": "⚡ EnergyPredict",
-    "precios": "Prezioak",
+    "pages": {
+      "prediction": "Iragarpena",
+      "historic": "Historikoa",
+      "stadistics": "Estatistikak",
+      "about": "Honi buruz"
+    },
     "graficas": "Grafikoak",
     "contacto": "Kontaktua",
     "theme": {
@@ -10,11 +15,49 @@
     },
     "language": "Hizkuntza"
   },
+  "prediction": {
+    "welcome": "Ongi etorri EnergyPredict-era",
+    "description": "Argindarraren prezioaren iragarpena modu argi eta iraunkorrean.",
+    "select_day": "Aukeratu eguna OMIE prezioak ikusteko:",
+    "select_charge_discharge_duration": "Aukeratu karga/deskarga iraupena (orduak):",
+    "hour": "Ordua",
+    "loading": "Datuak kargatzen...",
+    "predictedPrice": "Iragarritako Prezioa",
+    "realPrice": "Benetako Prezioa",
+    "chargeLabel": "Karga",
+    "dischargeLabel": "Deskarga",
+    "optimalChargeLabel": "Karga Optimoa",
+    "optimalDischargeLabel": "Deskarga Optimoa"
+  },
   "home": {
-    "welcome": "Ongietorria EnergyPredict-era",
-    "description": "Elektrizitate prezioen aurreikuspena modu argi eta iraunkorrean."
+    "title": "Energy Forecast Pro",
+    "tagline": "Erabakiak optimizatzeko energia-prezioen iragarpen zehatzak",
+    "description": "Energy Forecast Pro-k eredu aurreratuak eta interfaze intuitiboa uztartzen ditu energia erostea, biltegiratzea eta erabilera planifikatzeko. Prezioak tarteka ikusi, bateriak kargatzeko ordu merkeak aurkitu eta kostuak optimizatu gomendio argiekin.",
+    "features_title": "Ezaugarriak",
+    "feature_1": "15 minutuko tarteetan iragarpenak",
+    "feature_2": "Tarte pertsonalizatuen euskarria",
+    "feature_3": "Grafiko argiak eta esportagarriak",
+    "feature_4": "Karga/deskarga gomendio erabilgarriak",
+    "cta_explore": "Iragarpenak aztertu",
+    "cta_about": "Gehiago jakin"
   },
   "footer": {
-    "copyright": "© 2025 EnergyPredict. Eskubide guztiak erreserbatuta."
+    "copyright": "© 2025 EnergyPredict. Eskubide guztiak erreserbatuta.",
+    "poweredby": "EnergyPredict-ek egina",
+    "contact": "Kontaktua: info@energypredict.com"
+  },
+  "historic": {
+    "welcome": "Ongi etorri datu historikoen bistaratzailean",
+    "description": "Aztertu iraganeko argindar prezioak eta joerak.",
+    "select_day": "Aukeratu eguna OMIE prezio historikoak ikusteko:",
+    "select_charge_discharge_duration": "Aukeratu karga/deskarga iraupena (orduak):",
+    "hour": "Ordua",
+    "loading": "Datu historikoak kargatzen...",
+    "predictedPrice": "Iragarritako Prezioa",
+    "realPrice": "Benetako Prezioa",
+    "chargeLabel": "Karga",
+    "dischargeLabel": "Deskarga",
+    "optimalChargeLabel": "Karga Optimoa",
+    "optimalDischargeLabel": "Deskarga Optimoa"
   }
 }
