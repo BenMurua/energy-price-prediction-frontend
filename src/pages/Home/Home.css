@@ -9,7 +9,7 @@
 	align-items: center;
 	justify-content: center;
 	color: #ffffff;
-	background-image: url('src/assets/main.jpg');
+	background-image: url('/main.jpg');
 	background-size: cover;
 	background-position: center;
 }
