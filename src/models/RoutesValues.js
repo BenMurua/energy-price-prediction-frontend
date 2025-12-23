@@ -3,7 +3,7 @@ export const RoutesValues = {
   about: "/about",
   historic: "/historic",
   prediction: "/prediction",
-  stadistics: "/stadistics",
+  statistics: "/statistics",
   notFound: "*",
   // Add more routes as needed
 };

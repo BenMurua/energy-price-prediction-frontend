@@ -50,8 +50,8 @@ export default function Header() {
         <NavLink to={RoutesValues.historic}>
           {t("header.pages.historic")}
         </NavLink>
-        <NavLink to={RoutesValues.stadistics}>
-          {t("header.pages.stadistics")}
+        <NavLink to={RoutesValues.statistics}>
+          {t("header.pages.statistics")}
         </NavLink>
         <NavLink to={RoutesValues.home}>{t("header.pages.about")}</NavLink>
       </nav>

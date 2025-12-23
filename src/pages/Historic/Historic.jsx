@@ -16,9 +16,9 @@ const Historic = () => {
 
   const [apiRange, setApiRange] = useState({
     fecha_inicio: `${todayStr} 00:00:00`,
-    fecha_fin: `${tomorrowStr} 00:00:00`,
+    fecha_fin: `${todayStr} 23:45:00`,
   });
-  const [duration, setDuration] = useState("2h"); // valor inicial
+  const [duration, setDuration] = useState("4h"); // valor inicial
   const { t } = useTranslation();
 
   // Un hook para llamar a la API

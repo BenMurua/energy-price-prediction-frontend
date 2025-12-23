@@ -26,7 +26,7 @@ const mapToChartFormat = (items, variable) => {
     const rawValue = it[variable];
     // Si es número, redondearlo; si es booleano, mantenerlo
     const price = typeof rawValue === "boolean" ? rawValue : 
-                  rawValue != null ? Math.round(Number(rawValue)) : null;
+                  rawValue != null ? Math.round(Number(rawValue)) : 0;
     return { hour, price };
   });
 };
@@ -37,6 +37,7 @@ const mapToChartFormat = (items, variable) => {
  * @param {Array} queries - Lista de configuraciones: [{ key, tabla, variable }, ...]
  * @param {string} fecha_inicio - Fecha inicio para todas las queries
  * @param {string} fecha_fin - Fecha fin para todas las queries
+ * @param {boolean} raw - Si true, devuelve los datos crudos sin mapear
  * 
  * @returns {{ data: Object, isLoading: boolean, error: string|null }}
  * 
@@ -48,7 +49,7 @@ const mapToChartFormat = (items, variable) => {
  * const { data, isLoading, error } = useMultipleEnergyData(queries, fecha_inicio, fecha_fin);
  * // data.price, data.charge1h, etc.
  */
-export default function useMultipleEnergyData(queries = [], fecha_inicio, fecha_fin) {
+export default function useMultipleEnergyData(queries = [], fecha_inicio, fecha_fin, raw = false) {
   const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -73,7 +74,7 @@ export default function useMultipleEnergyData(queries = [], fecha_inicio, fecha_
           try {
             const response = await fetchFromAPI(tabla, variable, fecha_inicio, fecha_fin);
             const items = Array.isArray(response) ? response : response?.prices || [];
-            const mapped = mapToChartFormat(items, variable);
+            const mapped = raw ? items : mapToChartFormat(items, variable);
             return { key, data: mapped, success: true };
           } catch (err) {
             console.warn(`Error fetching ${key} (${variable}):`, err.message);

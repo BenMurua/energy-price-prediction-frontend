@@ -1,0 +1,44 @@
+/* StatisticsControl.css */
+
+.statistics-control-container {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 2rem;
+  margin: 2rem;
+  max-width: 600px;
+  text-align: center;
+  position: relative;
+}
+
+.statistics-control-container::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #0066ff, #00d4aa);
+  border-radius: 18px;
+  z-index: -1;
+  opacity: 0.3;
+  filter: blur(4px);
+}
+
+.text-lines p {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+.text-line {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.text-line input {
+  width: 20px;
+  height: 20px;
+  transform: scale(1.5);
+  margin-right: 1rem;
+}

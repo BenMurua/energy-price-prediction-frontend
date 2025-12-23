@@ -4,7 +4,7 @@
     "pages":{
       "prediction": "Prediction",
       "historic": "Historic",
-      "stadistics": "Stadistics",
+      "statistics": "Statistics",
       "about": "About"
     },
     "graficas": "Charts",
@@ -27,7 +27,10 @@
     "chargeLabel": "Charge",
     "dischargeLabel": "Discharge",
     "optimalChargeLabel": "Optimal Charge",
-    "optimalDischargeLabel": "Optimal Discharge"
+    "optimalDischargeLabel": "Optimal Discharge",
+    "optimal_charge_timeframe": "Optimal charge timeframe:",
+    "optimal_discharge_timeframe": "Optimal discharge timeframe:",
+    "not_available": "N/A"
   },
   "home": {
     "title": "Maximize the Profitability of your",
@@ -66,8 +69,12 @@
     "predictedPrice": "Predicted Price",
     "realPrice": "Real Price"
   },
-  "SelectSystemDuration": {
-    "label": "Select System Duration (hours):"
+  "statisticsChart": {
+  },
+  "statisticsControl": {
+    "title": "Models Statistics",
+    "1hour": "1 hour system",
+    "2hour": "2 hour system",
+    "4hour": "4 hour system"
   }
-  
 }

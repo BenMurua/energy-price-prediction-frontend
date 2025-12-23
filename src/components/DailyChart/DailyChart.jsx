@@ -80,6 +80,7 @@ export default function DailyChart({
 
           {/* Franjas rojas para descarga */}
           {dischargePeriods.map((period, idx) => {
+            if (period.start === "00:00") return null; // Skip periods starting at 00:00
             const x1 = getIndex(period.start);
             const x2 = getIndex(period.end) + 1;
             if (x1 === -1 || x2 === 0) return null;

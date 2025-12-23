@@ -4,7 +4,7 @@
     "pages": {
       "prediction": "Iragarpena",
       "historic": "Historikoa",
-      "stadistics": "Estatistikak",
+      "statistics": "Estatistikak",
       "about": "Honi buruz"
     },
     "graficas": "Grafikoak",
@@ -27,7 +27,10 @@
     "chargeLabel": "Karga",
     "dischargeLabel": "Deskarga",
     "optimalChargeLabel": "Karga Optimoa",
-    "optimalDischargeLabel": "Deskarga Optimoa"
+    "optimalDischargeLabel": "Deskarga Optimoa",
+    "optimal_charge_timeframe": "Karga denbora-tarte optimoa:",
+    "optimal_discharge_timeframe": "Deskarga denbora-tarte optimoa:",
+    "not_available": "E/E"
   },
   "home": {
     "title": "Zure Errentagarritasuna Maximizatu",
@@ -65,6 +68,24 @@
     "dischargeLabel": "Deskarga",
     "optimalChargeLabel": "Karga Optimoa",
     "optimalDischargeLabel": "Deskarga Optimoa"
+  },
+  "statistics": {
+    "title": "Estatistiken Grafikoa",
+    "variable": "Aldagaia",
+    "delta1h": "Delta Prezioa 1H Orduka",
+    "delta2h": "Delta Prezioa 2H Orduka",
+    "charge1h": "Karga 1H Orduka",
+    "discharge1h": "Deskarga 1H Orduka",
+    "charge2h": "Karga 2H Orduka",
+    "discharge2h": "Deskarga 2H Orduka",
+    "startDate": "Hasiera Data",
+    "endDate": "Amaiera Data",
+    "text1": "Testu bat",
+    "text2": "Testu bi",
+    "text3": "Testu hiru",
+    "processed1": "Prozesatua: Lehen testua",
+    "processed2": "Prozesatua: Bigarren testua",
+    "processed3": "Prozesatua: Hirugarren testua"
   },
   "SelectSystemDuration": {
     "label": "Sistema Iraupena Aukeratu (orduak):"
