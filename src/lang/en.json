@@ -1,6 +1,6 @@
 {
   "header": {
-    "logo": "⚡ EnergyPredict",
+    "logo": "⚡ BESS Flux",
     "pages":{
       "prediction": "Prediction",
       "historic": "Historic",
@@ -30,23 +30,31 @@
     "optimalDischargeLabel": "Optimal Discharge"
   },
   "home": {
-    "title": "Energy Forecast Pro",
-    "tagline": "Accurate energy price predictions to optimize your decisions",
-    "description": "Energy Forecast Pro combines advanced predictive models and an intuitive interface to help you plan energy purchases, storage and usage. Visualize prices by intervals, find the cheapest hours to charge batteries and optimize costs with clear, actionable recommendations.",
-    "features_title": "Features",
-    "feature_1": "Predictions at 15-minute intervals",
-    "feature_2": "Support for custom ranges",
-    "feature_3": "Clear, exportable visualizations",
-    "feature_4": "Actionable charging/discharging recommendations",
-    "cta_explore": "Explore predictions",
-    "cta_about": "Learn more"
+    "title": "Maximize the Profitability of your",
+    "omie_highlight": "BESS Asset",
+    "subtitle": "Advanced AI-driven energy arbitrage tool for Battery Energy Storage Systems in the Spanish market.",
+    "cta_explore": "Start Predicting",
+    "bess_title": "The Intelligence Engine for your Storage",
+    "bess_description": "Our AI learns from the interconnection between weather data and gas fundamentals to optimize your BESS operations and maximize ROI.",
+    "section_title_training": "Robust Data Infrastructure",
+    "section_title_benchmarking": "Performance Metrics",
+    "data_input_title": "Multi-Source Intelligence",
+    "data_input_description": "High-resolution integration of meteorological forecasts from 10 strategic nodes in Spain, combined with real-time Gas, CO2, and Iberian market fundamentals.",
+    "model_submodels_title": "Sequential Inference Engine",
+    "model_submodels_description": "A cascaded architecture of specialized neural networks where demand and generation forecasts flow into a final, high-fidelity price optimization layer.",
+    "optimization_title": "BESS Operation Optimization",
+    "optimization_description": "Advanced optimization algorithms that determine the most profitable charge and discharge schedules based on predicted market conditions and system constraints.",
+    "comparison_title": "Reliability Benchmarking",
+    "comparison_description": "Continuous validation against market outcomes and theoretical optima to ensure maximum predictive accuracy and risk transparency.",
+    "max_theoretical": "Theoretical Optimum",
+    "model_predicted": "AI Model Efficiency"
   },
 
   
   "footer": {
-    "copyright": "© 2025 EnergyPredict. All rights reserved.",
-    "poweredby": "Powered by EnergyPredict",
-    "contact": "Contact: info@energypredict.com"
+    "copyright": "© 2025 BESS Flux. All rights reserved.",
+    "poweredby": "Powered by BESS Flux",
+    "contact": "Contact: info@bessflux.com"
   },
   "historic": {
     "welcome": "Welcome to the Historic Data Viewer",

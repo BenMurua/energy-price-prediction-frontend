@@ -1,6 +1,6 @@
 {
   "header": {
-    "logo": "⚡ EnergyPredict",
+    "logo": "⚡ BESS Flux",
     "pages": {
       "prediction": "Iragarpena",
       "historic": "Historikoa",
@@ -30,21 +30,27 @@
     "optimalDischargeLabel": "Deskarga Optimoa"
   },
   "home": {
-    "title": "Energy Forecast Pro",
-    "tagline": "Erabakiak optimizatzeko energia-prezioen iragarpen zehatzak",
-    "description": "Energy Forecast Pro-k eredu aurreratuak eta interfaze intuitiboa uztartzen ditu energia erostea, biltegiratzea eta erabilera planifikatzeko. Prezioak tarteka ikusi, bateriak kargatzeko ordu merkeak aurkitu eta kostuak optimizatu gomendio argiekin.",
-    "features_title": "Ezaugarriak",
-    "feature_1": "15 minutuko tarteetan iragarpenak",
-    "feature_2": "Tarte pertsonalizatuen euskarria",
-    "feature_3": "Grafiko argiak eta esportagarriak",
-    "feature_4": "Karga/deskarga gomendio erabilgarriak",
-    "cta_explore": "Iragarpenak aztertu",
-    "cta_about": "Gehiago jakin"
+    "title": "Zure Errentagarritasuna Maximizatu",
+    "omie_highlight": "BESS Aktiboa",
+    "subtitle": "Bateriako Energia Biltegiratze Sistemetarako IA bidezko energia arbitraje tresna aurreratua merkatu espainiarrean.",
+    "cta_explore": "Iragarpenak Hasi",
+    "bess_title": "Zure Biltegiratzearen Adimen Motorra",
+    "bess_description": "Gure IAk datu meteorologikoen eta gasaren oinarrien arteko elkarreraginean ikasten du zure BESS eragiketak optimizatzeko eta ROI maximizatzeko.",
+    "section_title_training": "Datu Azpiegitura Sendua",
+    "section_title_benchmarking": "Errendimendu Metrikak",
+    "data_input_title": "Iturri Anitzeko Adimena",
+    "data_input_description": "Espainiako 10 nodo estrategikoko eguraldi iragarpenen alta bereizmeneko integrazioa, Gas, CO2 eta merkatu iberikoaren fundamentuekin denbora errealean konbinatuta.",
+    "model_submodels_title": "Inferentzia Sekuentzialaren Motorra",
+    "model_submodels_description": "Eskakera eta ekoizpen iragarpenak azken prezio optimizazio geruza fidel handiko batera isurtzen diren sare neuronal espezializatuen arkitektura kaskadatu bat.",
+    "comparison_title": "Fidagarritasunaren Ebaluazioa",
+    "comparison_description": "Merkatuaren emaitzen eta optimo teorikoen aurkako balidazio jarraitua, gehienezko zehaztasun iragarlea eta arriskuaren gardentasuna ziurtatzeko.",
+    "max_theoretical": "Optimo Teorikoa",
+    "model_predicted": "IA Ereduaren Efizientzia"
   },
   "footer": {
-    "copyright": "© 2025 EnergyPredict. Eskubide guztiak erreserbatuta.",
-    "poweredby": "EnergyPredict-ek egina",
-    "contact": "Kontaktua: info@energypredict.com"
+    "copyright": "© 2025 BESS Flux. Eskubide guztiak erreserbatuta.",
+    "poweredby": "BESS Flux-ek egina",
+    "contact": "Kontaktua: info@bessflux.com"
   },
   "historic": {
     "welcome": "Ongi etorri datu historikoen bistaratzailean",
@@ -59,5 +65,8 @@
     "dischargeLabel": "Deskarga",
     "optimalChargeLabel": "Karga Optimoa",
     "optimalDischargeLabel": "Deskarga Optimoa"
+  },
+  "SelectSystemDuration": {
+    "label": "Sistema Iraupena Aukeratu (orduak):"
   }
 }

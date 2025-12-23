@@ -1,6 +1,6 @@
 {
   "header": {
-    "logo": "⚡ EnergyPredict",
+    "logo": "⚡ BESS Flux",
     "pages": {
       "prediction": "Predicción",
       "historic": "Histórico",
@@ -30,21 +30,27 @@
     "optimalDischargeLabel": "Descarga Óptima"
   },
   "home": {
-    "title": "Energy Forecast Pro",
-    "tagline": "Predicciones precisas para optimizar tus decisiones",
-    "description": "Energy Forecast Pro combina modelos predictivos avanzados y una interfaz intuitiva para ayudarte a planificar compras, almacenamiento y uso de energía. Visualiza precios por intervalos, encuentra las horas más baratas para cargar baterías y optimiza costes con recomendaciones claras y accionables.",
-    "features_title": "Características",
-    "feature_1": "Predicciones en intervalos de 15 minutos",
-    "feature_2": "Soporte para rangos personalizados",
-    "feature_3": "Visualizaciones claras y exportables",
-    "feature_4": "Recomendaciones de carga/descarga accionables",
-    "cta_explore": "Explorar predicciones",
-    "cta_about": "Saber más"
+    "title": "Maximice la Rentabilidad de su",
+    "omie_highlight": "Activo BESS",
+    "subtitle": "Herramienta avanzada de arbitraje energético impulsada por IA para Sistemas de Almacenamiento de Energía en Baterías en el mercado español.",
+    "cta_explore": "Comenzar a Predecir",
+    "bess_title": "El Motor de Inteligencia para su Almacenamiento",
+    "bess_description": "Nuestra IA aprende de la interconexión entre datos meteorológicos y fundamentos de gas para optimizar sus operaciones BESS y maximizar el ROI.",
+    "section_title_training": "Infraestructura de Datos Robusta",
+    "section_title_benchmarking": "Métricas de Rendimiento",
+    "data_input_title": "Inteligencia Multisource",
+    "data_input_description": "Integración de alta resolución de pronósticos meteorológicos de 10 nodos estratégicos en España, combinada con fundamentos en tiempo real de Gas, CO2 y mercado ibérico.",
+    "model_submodels_title": "Motor de Inferencia Secuencial",
+    "model_submodels_description": "Una arquitectura en cascada de redes neuronales especializadas donde las previsiones de demanda y generación fluyen hacia una capa final de optimización de precios de alta fidelidad.",
+    "comparison_title": "Evaluación de Fiabilidad",
+    "comparison_description": "Validación continua contra resultados de mercado y óptimos teóricos para asegurar máxima precisión predictiva y transparencia de riesgo.",
+    "max_theoretical": "Óptimo Teórico",
+    "model_predicted": "Eficiencia del Modelo IA"
   },
   "footer": {
-    "copyright": "© 2025 EnergyPredict. Todos los derechos reservados.",
-    "poweredby": "Desarrollado por EnergyPredict",
-    "contact": "Contacto: info@energypredict.com"
+    "copyright": "© 2025 BESS Flux. Todos los derechos reservados.",
+    "poweredby": "Desarrollado por BESS Flux",
+    "contact": "Contacto: info@bessflux.com"
   },
   "historic": {
     "welcome": "Bienvenido al visor de datos históricos",
@@ -59,5 +65,8 @@
     "dischargeLabel": "Descarga",
     "optimalChargeLabel": "Carga Óptima",
     "optimalDischargeLabel": "Descarga Óptima"
+  },
+  "SelectSystemDuration": {
+    "label": "Seleccionar Duración del Sistema (horas):"
   }
 }

@@ -6,39 +6,56 @@
 }
 
 html, body {
-  height: auto;
-  min-height: 100vh;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
+
 body {
-  background-color: var(--background);
+  background: var(--background);
   color: var(--text);
   font-family: 'Poppins', sans-serif;
   transition: background-color 0.3s ease, color 0.3s ease;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3Cpattern id='grid' width='20' height='20' patternUnits='userSpaceOnUse'%3E%3Cpath d='M 20 0 L 0 0 0 20' fill='none' stroke='rgba(255,255,255,0.02)' stroke-width='0.5'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100' height='100' fill='url(%23grid)'/%3E%3C/svg%3E");
+  z-index: -1;
+  pointer-events: none;
 }
 
 /* ☀️ Modo Claro */
 :root {
-  --background: #F4FAF7;      /* verde muy claro */
-  --text: #2D3A2F;            /* verde bosque */
-  --card: #FFFFFF;            /* blanco */
-  --border: #CCE3D2;          /* verde suave */
-  --primary: #4CAF50;         /* verde renovable */
-  --primary-hover: #3C8C41;   /* verde más oscuro */
-  --button-text: #FFFFFF;     /* blanco */
-  --secondary: #2196F3;       /* azul energía solar/eólica */
-  --secondary-hover: #1769AA; /* azul más profundo */
+  --background: #f8f9fa;      /* blanco roto */
+  --text: #1e293b;            /* azul-gris oscuro */
+  --card: rgba(255, 255, 255, 0.1); /* glassmorphism */
+  --border: rgba(255, 255, 255, 0.2); /* borde fino */
+  --primary: #0066ff;         /* azul cobalto */
+  --primary-hover: #0052cc;   /* azul más oscuro */
+  --secondary: #00d4aa;       /* verde esmeralda */
+  --secondary-hover: #00b894; /* verde más oscuro */
+  --accent: #00d4aa;          /* verde para acentos */
+  --shadow: rgba(0, 102, 255, 0.1); /* sombra sutil */
 }
 
 /* 🌙 Modo Oscuro */
 [data-theme="dark"] {
-  --background: #101B13;      /* verde oscuro casi negro */
-  --text: #E8F5E9;            /* verde muy claro */
-  --card: #18241C;            /* verde profundo */
-  --border: #2A3B2E;          /* verde grisáceo */
-  --primary: #66BB6A;         /* verde brillante */
-  --primary-hover: #4C8C52;   /* verde más sobrio */
-  --button-text: #E8F5E9;     /* verde claro */
-  --secondary: #64B5F6;       /* azul brillante */
-  --secondary-hover: #1E88E5; /* azul fuerte */
+  --background: #0f172a;      /* azul-gris profundo */
+  --text: #f8f9fa;            /* blanco roto */
+  --card: rgba(255, 255, 255, 0.05); /* glassmorphism */
+  --border: rgba(255, 255, 255, 0.1); /* borde fino */
+  --primary: #0066ff;         /* azul cobalto */
+  --primary-hover: #0052cc;   /* azul más oscuro */
+  --secondary: #00d4aa;       /* verde esmeralda */
+  --secondary-hover: #00b894; /* verde más oscuro */
+  --accent: #00d4aa;          /* verde para acentos */
+  --shadow: rgba(0, 102, 255, 0.05); /* sombra sutil */
 }

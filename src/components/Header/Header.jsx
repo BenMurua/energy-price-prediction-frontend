@@ -56,10 +56,6 @@ export default function Header() {
         <NavLink to={RoutesValues.home}>{t("header.pages.about")}</NavLink>
       </nav>
 
-      <button className="theme-toggle" onClick={toggleTheme}>
-        {theme === "light" ? t("header.theme.light") : t("header.theme.dark")}
-      </button>
-
       <select
         className="lang-select"
         value={i18n.language}
@@ -69,6 +65,10 @@ export default function Header() {
         <option value="en">EN</option>
         <option value="eus">EUS</option>
       </select>
+
+      <button className="theme-toggle" onClick={toggleTheme}>
+        {theme === "light" ? t("header.theme.light") : t("header.theme.dark")}
+      </button>
     </header>
   );
 }
