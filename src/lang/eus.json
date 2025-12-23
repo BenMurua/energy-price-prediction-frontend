@@ -85,7 +85,16 @@
     "text3": "Testu hiru",
     "processed1": "Prozesatua: Lehen testua",
     "processed2": "Prozesatua: Bigarren testua",
-    "processed3": "Prozesatua: Hirugarren testua"
+    "processed3": "Prozesatua: Hirugarren testua",
+    "1hour": "1 ordu sistema",
+    "2hour": "2 ordu sistema",
+    "4hour": "4 ordu sistema",
+    "startingDate": "Hasiera Data",
+    "finalDate": "Amaiera Data",
+    "return": "Itzulera",
+    "predictionModelReturn": "Iragarpen Modeloaren Itzulera",
+    "delta4h": "Delta 4h",
+    "realPrice": "Benetako Prezioa"
   },
   "SelectSystemDuration": {
     "label": "Sistema Iraupena Aukeratu (orduak):"

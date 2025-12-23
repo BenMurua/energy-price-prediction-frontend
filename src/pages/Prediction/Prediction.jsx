@@ -32,24 +32,15 @@ const Prediction = () => {
   );
 
   // Calcular el timeframe óptimo para cargar y descargar
-  const getTimeframe = (period) => {
+  const getTimeframe = (period, durationHours) => {
     const items = period?.filter((item) => item.price === true) || [];
     if (items.length === 0) return t("prediction.not_available");
-    // Find the first consecutive block
-    let start = items[0].hour;
-    let end = start;
-    for (let i = 1; i < items.length; i++) {
-      const currentHour = parseInt(items[i].hour.split(":")[0]);
-      const prevHour = parseInt(items[i - 1].hour.split(":")[0]);
-      if (currentHour === prevHour + 1) {
-        end = items[i].hour;
-      } else {
-        break; // Stop at first gap
-      }
-    }
-    const endHour = parseInt(end.split(":")[0]) + 1;
+    // Start from the first true item
+    const startItem = items[0];
+    const startHour = parseInt(startItem.hour.split(":")[0]);
+    const endHour = startHour + durationHours;
     const endTime = `${String(endHour).padStart(2, "0")}:00`;
-    return `${start}-${endTime}`;
+    return `${startItem.hour}-${endTime}`;
   };
   // Obtener solo el primer bloque de carga/descarga
   const getFirstBlock = (period) => {
@@ -71,8 +62,14 @@ const Prediction = () => {
 
   const chargePeriodFiltered = getFirstBlock(data[`charge${duration}`]);
   const dischargePeriodFiltered = getFirstBlock(data[`discharge${duration}`]);
-  const bestChargeTimeframe = getTimeframe(data[`charge${duration}`]);
-  const bestDischargeTimeframe = getTimeframe(data[`discharge${duration}`]);
+  const bestChargeTimeframe = getTimeframe(
+    data[`charge${duration}`],
+    parseInt(duration)
+  );
+  const bestDischargeTimeframe = getTimeframe(
+    data[`discharge${duration}`],
+    parseInt(duration)
+  );
 
   return (
     <div

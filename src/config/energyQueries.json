@@ -69,6 +69,21 @@
       "key": "realPrice",
       "tabla": "market_data",
       "variable": "omie_price_1_eur_mwh"
+    },
+    {
+      "key": "prediction_delta1h",
+      "tabla": "V1_data_stadistics",
+      "variable": "real_delta_price_1h_hourly"
+    },
+    {
+      "key": "prediction_delta2h",
+      "tabla": "V1_data_stadistics",
+      "variable": "real_delta_price_2h_hourly"
+    },
+    {
+      "key": "prediction_delta4h",
+      "tabla": "V1_data_stadistics",
+      "variable": "real_delta_price_4h_hourly"
     }
   ]
 }

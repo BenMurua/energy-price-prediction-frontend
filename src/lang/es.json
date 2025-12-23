@@ -85,7 +85,16 @@
     "text3": "Texto tres",
     "processed1": "Procesado: Primer texto",
     "processed2": "Procesado: Segundo texto",
-    "processed3": "Procesado: Tercer texto"
+    "processed3": "Procesado: Tercer texto",
+    "1hour": "1 hora sistema",
+    "2hour": "2 horas sistema",
+    "4hour": "4 horas sistema",
+    "startingDate": "Fecha de Inicio",
+    "finalDate": "Fecha Final",
+    "return": "Retorno",
+    "predictionModelReturn": "Retorno del Modelo de Predicción",
+    "delta4h": "Delta 4h",
+    "realPrice": "Precio Real"
   },
   "SelectSystemDuration": {
     "label": "Seleccionar Duración del Sistema (horas):"

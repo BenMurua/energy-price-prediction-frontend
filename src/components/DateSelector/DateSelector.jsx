@@ -11,9 +11,11 @@ const formatApiDate = (date) => {
 
 export default function DateSelector({ onChange, initialDate }) {
   const today = new Date();
-  const defaultIso =
-    (initialDate && initialDate.slice(0, 10)) ||
-    today.toISOString().slice(0, 10);
+  const defaultIso = initialDate
+    ? typeof initialDate === "string"
+      ? initialDate.slice(0, 10)
+      : initialDate.toISOString().slice(0, 10)
+    : today.toISOString().slice(0, 10);
   const [day, setDay] = useState(defaultIso);
 
   // Emitir fecha_inicio/fecha_fin para el día seleccionado

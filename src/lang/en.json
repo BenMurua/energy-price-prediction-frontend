@@ -71,10 +71,21 @@
   },
   "statisticsChart": {
   },
-  "statisticsControl": {
+  "statistics": {
     "title": "Models Statistics",
     "1hour": "1 hour system",
     "2hour": "2 hour system",
-    "4hour": "4 hour system"
+    "4hour": "4 hour system",
+    "processed1": "Processed: First text",
+    "processed2": "Processed: Second text",
+    "processed3": "Processed: Third text",
+    "startingDate": "Starting Date",
+    "finalDate": "Final Date",
+    "return": "Return",
+    "predictionModelReturn": "Prediction Model Return",
+    "delta1h": "Delta 1h",
+    "delta2h": "Delta 2h",
+    "delta4h": "Delta 4h",
+    "realPrice": "Real Price"
   }
 }

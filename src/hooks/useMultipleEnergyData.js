@@ -23,11 +23,12 @@ const mapToChartFormat = (items, variable) => {
   return items.map((it) => {
     const dt = new Date(it.datetime);
     const hour = `${pad(dt.getHours())}:${pad(dt.getMinutes())}`;
+    const dateStr = dt.toLocaleDateString('es-ES');
     const rawValue = it[variable];
     // Si es número, redondearlo; si es booleano, mantenerlo
     const price = typeof rawValue === "boolean" ? rawValue : 
                   rawValue != null ? Math.round(Number(rawValue)) : 0;
-    return { hour, price };
+    return { hour, date: dateStr, price };
   });
 };
 
