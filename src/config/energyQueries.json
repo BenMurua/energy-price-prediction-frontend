@@ -27,7 +27,8 @@
     },
     {
       "key": "charge2h",
-      "tabla": "V1_data_stadistics"
+      "tabla": "V1_data_stadistics",
+      "variable": "charge_2h_hourly"
     },
     {
       "key": "discharge2h",
