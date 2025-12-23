@@ -27,8 +27,7 @@
     },
     {
       "key": "charge2h",
-      "tabla": "V1_data_stadistics",
-      "variable": "charge_2h_hourly"
+      "tabla": "V1_data_stadistics"
     },
     {
       "key": "discharge2h",
@@ -73,32 +72,38 @@
     {
       "key": "prediction_delta1h",
       "tabla": "V1_data_stadistics",
-      "variable": "real_delta_price_1h_hourly"
+      "variable": "real_delta_price_1h_hourly",
+      "filterUniquePerDay": true
     },
     {
       "key": "prediction_delta2h",
       "tabla": "V1_data_stadistics",
-      "variable": "real_delta_price_2h_hourly"
+      "variable": "real_delta_price_2h_hourly",
+      "filterUniquePerDay": true
     },
     {
       "key": "prediction_delta4h",
       "tabla": "V1_data_stadistics",
-      "variable": "real_delta_price_4h_hourly"
+      "variable": "real_delta_price_4h_hourly",
+      "filterUniquePerDay": true
     },
     {
       "key": "ideal_delta1h",
       "tabla": "real_data_stadistics",
-      "variable": "delta_price_1h_hourly"
+      "variable": "delta_price_1h_hourly",
+      "filterUniquePerDay": true
     },
     {
       "key": "ideal_delta2h",
       "tabla": "real_data_stadistics",
-      "variable": "delta_price_2h_hourly"
+      "variable": "delta_price_2h_hourly",
+      "filterUniquePerDay": true
     },
     {
       "key": "ideal_delta4h",
       "tabla": "real_data_stadistics",
-      "variable": "delta_price_4h_hourly"
+      "variable": "delta_price_4h_hourly",
+      "filterUniquePerDay": true
     }
   ]
 }

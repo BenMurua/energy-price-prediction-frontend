@@ -32,6 +32,18 @@ const mapToChartFormat = (items, variable) => {
   });
 };
 
+// Función para filtrar a un valor único por día
+const filterUniquePerDay = (data) => {
+  const seen = new Set();
+  return data.filter(item => {
+    if (seen.has(item.date)) {
+      return false;
+    }
+    seen.add(item.date);
+    return true;
+  });
+};
+
 /**
  * Hook para obtener múltiples variables de la API en paralelo.
  * 
@@ -71,11 +83,16 @@ export default function useMultipleEnergyData(queries = [], fecha_inicio, fecha_
       try {
         // Ejecutar todas las queries en paralelo con Promise.allSettled
         // para que un error individual no rompa las demás
-        const promises = queries.map(async ({ key, tabla, variable }) => {
+        const promises = queries.map(async (query) => {
+          const { key, tabla, variable } = query;
           try {
             const response = await fetchFromAPI(tabla, variable, fecha_inicio, fecha_fin);
             const items = Array.isArray(response) ? response : response?.prices || [];
-            const mapped = raw ? items : mapToChartFormat(items, variable);
+            let mapped = raw ? items : mapToChartFormat(items, variable);
+            // Para estadísticas, filtrar a un valor por día
+            if (query.filterUniquePerDay) {
+              mapped = filterUniquePerDay(mapped);
+            }
             return { key, data: mapped, success: true };
           } catch (err) {
             console.warn(`Error fetching ${key} (${variable}):`, err.message);
