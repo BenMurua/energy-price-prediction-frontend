@@ -59,7 +59,7 @@ const Statistics = () => {
       ) : error ? (
         <p>Error: {error}</p>
       ) : (
-        <StatisticsChart data={data.prediction_delta1h || []} data2={delta} />
+        <StatisticsChart data={data.ideal_delta1h || []} data2={delta} />
       )}
     </div>
   );
