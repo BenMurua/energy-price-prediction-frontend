@@ -48,6 +48,14 @@ const Statistics = () => {
     ? data.prediction_delta4h
     : null;
 
+  const data1 = selected[0]
+    ? data.ideal_delta1h
+    : selected[1]
+    ? data.ideal_delta2h
+    : selected[2]
+    ? data.ideal_delta4h
+    : null;
+
   return (
     <div className="statistics-page">
       <StatisticsControl
@@ -59,7 +67,7 @@ const Statistics = () => {
       ) : error ? (
         <p>Error: {error}</p>
       ) : (
-        <StatisticsChart data={data.ideal_delta1h || []} data2={delta} />
+        <StatisticsChart data={data1 || []} data2={delta} />
       )}
     </div>
   );
