@@ -89,14 +89,18 @@
     "1hour": "1 ordu sistema",
     "2hour": "2 ordu sistema",
     "4hour": "4 ordu sistema",
+    "idealPriceSpread": "Diferentzial Ideala",
+    "predictionPriceSpread": "Diferentzialaren Irizpidea",
     "startingDate": "Hasiera Data",
     "finalDate": "Amaiera Data",
     "return": "Itzulera",
     "predictionModelReturn": "Iragarpen Modeloaren Itzulera",
     "delta4h": "Delta 4h",
-    "realPrice": "Benetako Prezioa"
+    "realPrice": "Benetako Prezioa",
+    "days": "egun",
+    "capturePercentage": "Kaptazio Portzentajea"
   },
   "SelectSystemDuration": {
-    "label": "Sistema Iraupena Aukeratu (orduak):"
+    "label": "BESS Sistemaren Iraupena Aukeratu (orduak):"
   }
 }

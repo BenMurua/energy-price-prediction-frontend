@@ -3,11 +3,24 @@ import { useTranslation } from "react-i18next";
 import DateSelector from "../DateSelector/DateSelector";
 import "./StatisticsControl.css"; // Asumiendo que crearemos un CSS
 
-const StatisticsControl = ({ onDateRangeChange, onSelectionChange }) => {
+const StatisticsControl = ({
+  onDateRangeChange,
+  onSelectionChange,
+  idealAvg,
+  predictionAvg,
+  idealCount,
+  predictionCount,
+  capturePercentage,
+}) => {
   const { t } = useTranslation();
-  const [selected, setSelected] = useState([false, false, false]);
+  const [selected, setSelected] = useState([false, false, true]);
   const [startDate, setStartDate] = useState("2025-12-20");
   const [endDate, setEndDate] = useState("2025-12-23");
+
+  const today = new Date();
+  const yesterday = new Date(today);
+  yesterday.setDate(today.getDate() - 1);
+  const maxDate = yesterday.toISOString().slice(0, 10);
 
   const associations = {
     1: "Processed: First text",
@@ -65,11 +78,16 @@ const StatisticsControl = ({ onDateRangeChange, onSelectionChange }) => {
         <DateSelector
           onChange={handleStartDateChange}
           initialDate={startDate}
+          maxDate={maxDate}
         />
       </div>
       <div className="date-selector-row">
         <label>{t("statistics.finalDate")}:</label>
-        <DateSelector onChange={handleEndDateChange} initialDate={endDate} />
+        <DateSelector
+          onChange={handleEndDateChange}
+          initialDate={endDate}
+          maxDate={maxDate}
+        />
       </div>
       <div className="text-lines">
         {texts.map((text, index) => (
@@ -82,6 +100,32 @@ const StatisticsControl = ({ onDateRangeChange, onSelectionChange }) => {
             <p>{text}</p>
           </div>
         ))}
+      </div>
+      <div className="averages">
+        <div className="average-line">
+          <span style={{ fontSize: "larger" }}>
+            {t("statistics.idealPriceSpread")}:{" "}
+            {idealAvg !== undefined ? idealAvg.toFixed(2) + " €/MWh" : "N/A"} (
+            {idealCount} {t("statistics.days")})
+          </span>
+        </div>
+        <div className="average-line">
+          <span style={{ fontSize: "larger" }}>
+            {t("statistics.predictionPriceSpread")}:{" "}
+            {predictionAvg !== undefined
+              ? predictionAvg.toFixed(2) + " €/MWh"
+              : "N/A"}{" "}
+            ({predictionCount} {t("statistics.days")})
+          </span>
+        </div>
+        <div className="average-line">
+          <span style={{ fontSize: "larger" }}>
+            {t("statistics.capturePercentage")}:{" "}
+            {capturePercentage !== undefined
+              ? capturePercentage.toFixed(2) + "%"
+              : "N/A"}
+          </span>
+        </div>
       </div>
     </div>
   );

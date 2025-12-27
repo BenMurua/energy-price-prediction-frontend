@@ -9,7 +9,7 @@ const formatApiDate = (date) => {
   )} ${pad(date.getHours())}:${pad(date.getMinutes())}:00`;
 };
 
-export default function DateSelector({ onChange, initialDate }) {
+export default function DateSelector({ onChange, initialDate, maxDate }) {
   const today = new Date();
   const defaultIso = initialDate
     ? typeof initialDate === "string"
@@ -35,7 +35,12 @@ export default function DateSelector({ onChange, initialDate }) {
   return (
     <div className="date-selector">
       <label className="label"></label>
-      <input type="date" value={day} onChange={(e) => setDay(e.target.value)} />
+      <input
+        type="date"
+        value={day}
+        onChange={(e) => setDay(e.target.value)}
+        max={maxDate}
+      />
     </div>
   );
 }

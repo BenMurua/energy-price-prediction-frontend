@@ -76,6 +76,8 @@
     "1hour": "1 hour system",
     "2hour": "2 hour system",
     "4hour": "4 hour system",
+    "idealPriceSpread": "Ideal Spread",
+    "predictionPriceSpread": "Prediction Spread",
     "processed1": "Processed: First text",
     "processed2": "Processed: Second text",
     "processed3": "Processed: Third text",
@@ -86,6 +88,12 @@
     "delta1h": "Delta 1h",
     "delta2h": "Delta 2h",
     "delta4h": "Delta 4h",
-    "realPrice": "Real Price"
+    "realPrice": "Real Price",
+    "days": "days",
+    "capturePercentage": "Capture Percentage"
+  },
+    "SelectSystemDuration": {
+    "label": "Select BESS System Duration (hours):"
   }
 }
+

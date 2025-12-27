@@ -89,14 +89,18 @@
     "1hour": "1 hora sistema",
     "2hour": "2 horas sistema",
     "4hour": "4 horas sistema",
+    "idealPriceSpread": "Diferencial Ideal",
+    "predictionPriceSpread": "Diferencial de Predicción",
     "startingDate": "Fecha de Inicio",
     "finalDate": "Fecha Final",
     "return": "Retorno",
     "predictionModelReturn": "Retorno del Modelo de Predicción",
     "delta4h": "Delta 4h",
-    "realPrice": "Precio Real"
+    "realPrice": "Precio Real",
+    "days": "días",
+    "capturePercentage": "Porcentaje de Captación"
   },
   "SelectSystemDuration": {
-    "label": "Seleccionar Duración del Sistema (horas):"
+    "label": "Seleccionar Duración del Sistema BESS (horas):"
   }
 }

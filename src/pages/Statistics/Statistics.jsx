@@ -12,7 +12,7 @@ const Statistics = () => {
     fecha_inicio: "2025-12-18 00:00:00",
     fecha_fin: "2025-12-22 00:00:00",
   });
-  const [selected, setSelected] = useState([false, false, false]);
+  const [selected, setSelected] = useState([false, false, true]);
 
   // Usar el hook para obtener datos
   const { data, isLoading, error } = useMultipleEnergyData(
@@ -56,11 +56,35 @@ const Statistics = () => {
     ? data.ideal_delta4h
     : null;
 
+  const validData1 = data1 ? data1.filter((item) => item.price !== 0) : [];
+  const idealAvg =
+    validData1.length > 0
+      ? validData1.reduce((sum, item) => sum + item.price, 0) /
+        validData1.length
+      : undefined;
+  const idealCount = validData1.length;
+
+  const validDelta = delta ? delta.filter((item) => item.price !== 0) : [];
+  const predictionAvg =
+    validDelta.length > 0
+      ? validDelta.reduce((sum, item) => sum + item.price, 0) /
+        validDelta.length
+      : undefined;
+  const predictionCount = validDelta.length;
+
+  const capturePercentage =
+    idealAvg && predictionAvg ? (predictionAvg / idealAvg) * 100 : undefined;
+
   return (
     <div className="statistics-page">
       <StatisticsControl
         onDateRangeChange={handleDateRangeChange}
         onSelectionChange={handleSelectionChange}
+        idealAvg={idealAvg}
+        predictionAvg={predictionAvg}
+        idealCount={idealCount}
+        predictionCount={predictionCount}
+        capturePercentage={capturePercentage}
       />
       {isLoading ? (
         <p>{t("prediction.loading")}</p>
