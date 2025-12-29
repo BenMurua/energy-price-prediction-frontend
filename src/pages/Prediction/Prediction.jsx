@@ -72,37 +72,10 @@ const Prediction = () => {
   );
 
   return (
-    <div
-      className="prediction-container"
-      style={{ display: "flex", flexDirection: "row", marginTop: "20px" }}
-    >
-      <div
-        style={{
-          background: "rgba(255, 255, 255, 0.05)",
-          border: "1px solid rgba(255, 255, 255, 0.1)",
-          borderRadius: "24px",
-          padding: "2rem",
-          marginRight: "0px",
-          marginLeft: "80px",
-          paddingLeft: "40px",
-          position: "relative",
-          boxShadow: "0 0 20px rgba(0, 102, 255, 0.2)",
-          backdropFilter: "blur(10px)",
-        }}
-      >
+    <div className="prediction-container">
+      <div className="prediction-sidebar">
         <SelectSystemDuration value={duration} onChange={setDuration} />
-        <div
-          className="best-charge-box"
-          style={{
-            marginTop: "15px",
-            padding: "12px",
-            border: "1px solid rgba(255, 255, 255, 0.1)",
-            borderRadius: "12px",
-            backgroundColor: "rgba(255, 255, 255, 0.05)",
-            backdropFilter: "blur(5px)",
-            boxShadow: "0 0 10px rgba(0, 212, 170, 0.1)",
-          }}
-        >
+        <div className="best-charge-box">
           <p
             style={{
               margin: 0,
@@ -128,7 +101,7 @@ const Prediction = () => {
           </p>
         </div>
       </div>
-      <div style={{ flex: 1 }}>
+      <div className="prediction-chart">
         {isLoading ? (
           <p>{t("prediction.loading")}</p>
         ) : error ? (

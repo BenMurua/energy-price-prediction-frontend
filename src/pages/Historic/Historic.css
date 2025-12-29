@@ -1,11 +1,32 @@
-.historic-page {
-  padding: 40px;
+.historic-container {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: row;
+  padding: 20px;
 }
 
-.historic-page h2 {
-  font-size: 2rem;
-  color: #333;
+.historic-sidebar {
+  flex: 0 0 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.historic-chart {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .historic-container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .historic-sidebar {
+    flex: none;
+    order: 2;
+  }
+
+  .historic-chart {
+    order: 1;
+  }
 }

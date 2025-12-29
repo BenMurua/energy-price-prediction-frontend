@@ -38,12 +38,11 @@ const Historic = () => {
   };
 
   return (
-    <div
-      className="historic-container"
-      style={{ display: "flex", flexDirection: "row" }}
-    >
-      <SelectSystemDuration value={duration} onChange={setDuration} />
-      <div style={{ flex: 1 }}>
+    <div className="historic-container">
+      <div className="historic-sidebar">
+        <SelectSystemDuration value={duration} onChange={setDuration} />
+      </div>
+      <div className="historic-chart">
         <DateSelector
           onChange={handleRangeChange}
           initialDate={apiRange.fecha_inicio.slice(0, 10)}

@@ -27,3 +27,20 @@
 .date-selector .checkbox-row {
 	margin-left: 2px;
 }
+
+@media (max-width: 768px) {
+	.date-selector {
+		max-width: 100%;
+	}
+
+	.date-selector .row {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 5px;
+	}
+
+	.date-selector .label {
+		width: auto;
+		margin-bottom: 5px;
+	}
+}

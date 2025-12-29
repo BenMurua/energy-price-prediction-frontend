@@ -33,3 +33,19 @@
   background: #fff;
   color: #333;
 }
+
+@media (max-width: 768px) {
+  .select-system-duration-container {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .select-system-duration-label {
+    font-size: 1rem;
+  }
+
+  .select-system-duration-select {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+}
