@@ -1,6 +1,5 @@
 export const RoutesValues = {
   app: "/",   
-  about: "/about",
   historic: "/historic",
   prediction: "/prediction",
   statistics: "/statistics",

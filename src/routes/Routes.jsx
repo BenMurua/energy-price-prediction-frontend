@@ -4,7 +4,6 @@ import Home from "../pages/Home/Home";
 import Prediction from "../pages/Prediction/Prediction";
 import Historic from "../pages/Historic/Historic.jsx";
 import Statistics from "../pages/Statistics/Statistics.jsx";
-import About from "../pages/About/About";
 import { RoutesValues } from "../models/RoutesValues.js";
 
 export const router = createHashRouter([
@@ -22,11 +21,6 @@ export const router = createHashRouter([
       },
       { path: RoutesValues.historic, element: <Historic /> },
       { path: RoutesValues.statistics, element: <Statistics /> },
-      {
-        path: RoutesValues.about,
-        element: <About />,
-      },
-      {},
     ],
   },
 ]);
