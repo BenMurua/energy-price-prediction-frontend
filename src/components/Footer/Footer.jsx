@@ -12,7 +12,7 @@ export default function Footer() {
       </p>
       <p>
         {t("footer.contact", {
-          defaultValue: "Contact: info@energypredict.com",
+          defaultValue: "Contact: bntmurua@gmail.com",
         })}
       </p>
     </footer>
