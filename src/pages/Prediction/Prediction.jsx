@@ -31,16 +31,44 @@ const Prediction = () => {
     apiRange.fecha_fin
   );
 
-  // Calcular el timeframe óptimo para cargar y descargar
-  const getTimeframe = (period, durationHours) => {
-    const items = period?.filter((item) => item.price === true) || [];
-    if (items.length === 0) return t("prediction.not_available");
-    // Start from the first true item
-    const startItem = items[0];
-    const startHour = parseInt(startItem.hour.split(":")[0]);
-    const endHour = startHour + durationHours;
-    const endTime = `${String(endHour).padStart(2, "0")}:00`;
-    return `${startItem.hour}-${endTime}`;
+  // Calcular los periodos óptimos para cargar y descargar
+  const getPeriodsString = (period) => {
+    if (!period || period.length === 0) return t("prediction.not_available");
+    const periods = [];
+    let start = null;
+    period.forEach((item, index) => {
+      const isActive = item.price === true || item.price === 1;
+      if (isActive && start === null) {
+        start = item.hour;
+      } else if (!isActive && start !== null) {
+        let end = period[index - 1].hour;
+        // Sumar 15 minutos al end
+        const [hour, min] = end.split(":").map(Number);
+        const totalMinutes = hour * 60 + min + 15;
+        const newHour = Math.floor(totalMinutes / 60);
+        const newMin = totalMinutes % 60;
+        end = `${String(newHour).padStart(2, "0")}:${String(newMin).padStart(
+          2,
+          "0"
+        )}`;
+        periods.push(`${start}-${end}`);
+        start = null;
+      }
+    });
+    if (start !== null) {
+      let end = period[period.length - 1].hour;
+      // Sumar 15 minutos al end
+      const [hour, min] = end.split(":").map(Number);
+      const totalMinutes = hour * 60 + min + 15;
+      const newHour = Math.floor(totalMinutes / 60);
+      const newMin = totalMinutes % 60;
+      end = `${String(newHour).padStart(2, "0")}:${String(newMin).padStart(
+        2,
+        "0"
+      )}`;
+      periods.push(`${start}-${end}`);
+    }
+    return periods.join(", ");
   };
   // Obtener solo el primer bloque de carga/descarga
   const getFirstBlock = (period) => {
@@ -62,14 +90,8 @@ const Prediction = () => {
 
   const chargePeriodFiltered = getFirstBlock(data[`charge${duration}`]);
   const dischargePeriodFiltered = getFirstBlock(data[`discharge${duration}`]);
-  const bestChargeTimeframe = getTimeframe(
-    data[`charge${duration}`],
-    parseInt(duration)
-  );
-  const bestDischargeTimeframe = getTimeframe(
-    data[`discharge${duration}`],
-    parseInt(duration)
-  );
+  const bestChargeTimeframe = getPeriodsString(data[`charge${duration}`]);
+  const bestDischargeTimeframe = getPeriodsString(data[`discharge${duration}`]);
 
   return (
     <div className="prediction-container">

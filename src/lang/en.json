@@ -28,8 +28,8 @@
     "dischargeLabel": "Discharge",
     "optimalChargeLabel": "Optimal Charge",
     "optimalDischargeLabel": "Optimal Discharge",
-    "optimal_charge_timeframe": "Optimal charge timeframe:",
-    "optimal_discharge_timeframe": "Optimal discharge timeframe:",
+    "optimal_charge_timeframe": "Optimal charge periods:",
+    "optimal_discharge_timeframe": "Optimal discharge periods:",
     "not_available": "N/A"
   },
   "home": {

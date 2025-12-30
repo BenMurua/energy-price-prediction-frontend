@@ -28,8 +28,8 @@
     "dischargeLabel": "Descarga",
     "optimalChargeLabel": "Carga Óptima",
     "optimalDischargeLabel": "Descarga Óptima",
-    "optimal_charge_timeframe": "Marco temporal de carga óptimo:",
-    "optimal_discharge_timeframe": "Marco temporal de descarga óptimo:",
+    "optimal_charge_timeframe": "Períodos de carga óptimos:",
+    "optimal_discharge_timeframe": "Períodos de descarga óptimos:",
     "not_available": "N/D"
   },
   "home": {

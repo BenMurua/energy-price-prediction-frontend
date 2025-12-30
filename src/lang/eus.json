@@ -28,8 +28,8 @@
     "dischargeLabel": "Deskarga",
     "optimalChargeLabel": "Karga Optimoa",
     "optimalDischargeLabel": "Deskarga Optimoa",
-    "optimal_charge_timeframe": "Karga denbora-tarte optimoa:",
-    "optimal_discharge_timeframe": "Deskarga denbora-tarte optimoa:",
+    "optimal_charge_timeframe": "Karga periodo optimoak:",
+    "optimal_discharge_timeframe": "Deskarga periodo optimoak:",
     "not_available": "E/E"
   },
   "home": {
