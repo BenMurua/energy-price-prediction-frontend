@@ -77,6 +77,7 @@
 @media (max-width: 768px) {
   .prediction-container {
     flex-direction: column;
+    padding: 10px;
   }
 
   .prediction-sidebar {
@@ -89,5 +90,27 @@
 
   .prediction-chart {
     order: 1;
+    width: 100%;
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .prediction-container {
+    padding: 5px;
+  }
+
+  .prediction-sidebar {
+    padding: 0.75rem;
+    border-radius: 16px;
+  }
+
+  .prediction-date-text {
+    font-size: 1.2rem;
+  }
+
+  .optimal-charge-text,
+  .optimal-discharge-text {
+    font-size: 1rem;
   }
 }

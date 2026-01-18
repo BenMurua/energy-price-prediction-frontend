@@ -11,6 +11,31 @@
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Contenedor del gráfico con altura responsiva */
+.chart-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.chart-wrapper .recharts-responsive-container {
+  min-height: 300px;
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+  .daily-chart-container {
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .chart-wrapper {
+    width: calc(100% + 1rem);
+    margin-left: -0.5rem;
+  }
+}
+
 /* Título del gráfico */
 .daily-chart-container h2 {
   font-size: 1.5rem;

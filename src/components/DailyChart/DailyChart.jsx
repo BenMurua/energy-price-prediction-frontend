@@ -1,5 +1,6 @@
 // src/components/DailyChart/DailyChart.js
 
+import React from "react";
 import "./DailyChart.css";
 import { useTranslation } from "react-i18next";
 import { extractPeriods } from "../../utils/chartUtils";
@@ -41,9 +42,29 @@ export default function DailyChart({
   // Función para obtener índice en el array de datos
   const getIndex = (hour) => data.findIndex((d) => d.hour === hour);
 
+  // Altura responsiva según el ancho de pantalla
+  const getChartHeight = () => {
+    if (typeof window !== "undefined") {
+      return window.innerWidth <= 480
+        ? 280
+        : window.innerWidth <= 768
+          ? 350
+          : 500;
+    }
+    return 500;
+  };
+
+  const [chartHeight, setChartHeight] = React.useState(getChartHeight());
+
+  React.useEffect(() => {
+    const handleResize = () => setChartHeight(getChartHeight());
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
-    <div style={{ width: "100%", maxWidth: 1200, margin: "0 auto" }}>
-      <ResponsiveContainer width="100%" height={600}>
+    <div className="chart-wrapper">
+      <ResponsiveContainer width="100%" height={chartHeight}>
         <LineChart
           data={data.map((d, i) => ({
             ...d,
