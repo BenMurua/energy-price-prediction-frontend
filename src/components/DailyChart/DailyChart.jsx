@@ -83,7 +83,7 @@ export default function DailyChart({
           <XAxis
             dataKey="hour"
             tick={{ fontSize: isMobile ? 9 : 12 }}
-            interval={isMobile ? 7 : 0}
+            interval={isMobile ? 7 : 2}
           />
           <YAxis
             domain={["auto", "auto"]}
