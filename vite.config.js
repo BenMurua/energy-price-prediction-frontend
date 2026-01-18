@@ -11,15 +11,6 @@ export default defineConfig(({ mode }) => {
     plugins: [react()],
     server: {
       port: 8001,
-      proxy: {
-        '/api': {
-          // 3. Usamos 'env.VARIABLE' en vez de 'process.env.VARIABLE'
-          target: env.VITE_API_TARGET,
-          changeOrigin: true,
-          secure: false,
-          rewrite: (path) => path.replace(/^\/api/, '/api'),
-        },
-      },
     },
   }
 })
