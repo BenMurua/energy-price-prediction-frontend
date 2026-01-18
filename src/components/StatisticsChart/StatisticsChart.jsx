@@ -33,6 +33,18 @@ export default function StatisticsChart({
   // Detectar si es móvil para ajustar márgenes
   const isMobile = typeof window !== "undefined" && window.innerWidth <= 768;
 
+  // Altura responsiva según el ancho de pantalla
+  const getChartHeight = () => {
+    if (typeof window !== "undefined") {
+      return window.innerWidth <= 480
+        ? 220
+        : window.innerWidth <= 768
+          ? 280
+          : 500;
+    }
+    return 500;
+  };
+
   const maxLabels = isMobile ? 3 : 10;
   const interval =
     mergedData.length > maxLabels
