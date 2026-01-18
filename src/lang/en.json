@@ -30,7 +30,8 @@
     "optimalDischargeLabel": "Optimal Discharge",
     "optimal_charge_timeframe": "Optimal charge periods:",
     "optimal_discharge_timeframe": "Optimal discharge periods:",
-    "not_available": "N/A"
+    "not_available": "N/A",
+    "for_date": "Prediction for {{date}}"
   },
   "home": {
     "title": "Maximize the Profitability of your",

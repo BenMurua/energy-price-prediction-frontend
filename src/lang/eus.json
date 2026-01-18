@@ -30,7 +30,8 @@
     "optimalDischargeLabel": "Deskarga Optimoa",
     "optimal_charge_timeframe": "Karga periodo optimoak:",
     "optimal_discharge_timeframe": "Deskarga periodo optimoak:",
-    "not_available": "E/E"
+    "not_available": "E/E",
+    "for_date": "Iragarpena {{date}}-(e)rako"
   },
   "home": {
     "title": "Zure Errentagarritasuna Maximizatu",

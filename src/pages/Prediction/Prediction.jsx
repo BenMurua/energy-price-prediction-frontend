@@ -13,6 +13,7 @@ const Prediction = () => {
   const tomorrow = new Date(today);
   tomorrow.setDate(today.getDate() + 1);
   const tomorrowStr = tomorrow.toISOString().slice(0, 10);
+  const predictionDate = tomorrow.toLocaleDateString();
   const dayAfterTomorrow = new Date(tomorrow);
   dayAfterTomorrow.setDate(tomorrow.getDate() + 1);
   const dayAfterTomorrowStr = dayAfterTomorrow.toISOString().slice(0, 10);
@@ -28,7 +29,7 @@ const Prediction = () => {
   const { data, isLoading, error } = useMultipleEnergyData(
     energyConfig.queries,
     apiRange.fecha_inicio,
-    apiRange.fecha_fin
+    apiRange.fecha_fin,
   );
 
   // Calcular los periodos óptimos para cargar y descargar
@@ -49,7 +50,7 @@ const Prediction = () => {
         const newMin = totalMinutes % 60;
         end = `${String(newHour).padStart(2, "0")}:${String(newMin).padStart(
           2,
-          "0"
+          "0",
         )}`;
         periods.push(`${start}-${end}`);
         start = null;
@@ -64,7 +65,7 @@ const Prediction = () => {
       const newMin = totalMinutes % 60;
       end = `${String(newHour).padStart(2, "0")}:${String(newMin).padStart(
         2,
-        "0"
+        "0",
       )}`;
       periods.push(`${start}-${end}`);
     }
@@ -96,28 +97,15 @@ const Prediction = () => {
   return (
     <div className="prediction-container">
       <div className="prediction-sidebar">
-        <SelectSystemDuration value={duration} onChange={setDuration} />
-        <div className="best-charge-box">
-          <p
-            style={{
-              margin: 0,
-              fontWeight: "500",
-              color: "#333333",
-              fontSize: "1.1rem",
-              textShadow: "none",
-            }}
-          >
+        <div className="prediction-controls">
+          <SelectSystemDuration value={duration} onChange={setDuration} />
+          <p className="prediction-date-text">
+            {t("prediction.for_date", { date: predictionDate })}
+          </p>
+          <p className="optimal-charge-text">
             {t("prediction.optimal_charge_timeframe")} {bestChargeTimeframe}
           </p>
-          <p
-            style={{
-              margin: "10px 0 0 0",
-              fontWeight: "500",
-              color: "#333333",
-              fontSize: "1.1rem",
-              textShadow: "none",
-            }}
-          >
+          <p className="optimal-discharge-text">
             {t("prediction.optimal_discharge_timeframe")}{" "}
             {bestDischargeTimeframe}
           </p>

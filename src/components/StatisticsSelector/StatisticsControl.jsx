@@ -14,13 +14,14 @@ const StatisticsControl = ({
 }) => {
   const { t } = useTranslation();
   const [selected, setSelected] = useState([false, false, true]);
-  const [startDate, setStartDate] = useState("2025-12-20");
-  const [endDate, setEndDate] = useState("2025-12-23");
+  const [startDate, setStartDate] = useState("2025-12-07");
 
   const today = new Date();
   const yesterday = new Date(today);
   yesterday.setDate(today.getDate() - 1);
-  const maxDate = yesterday.toISOString().slice(0, 10);
+  const yesterdayStr = yesterday.toISOString().slice(0, 10);
+  const maxDate = yesterdayStr;
+  const [endDate, setEndDate] = useState(yesterdayStr);
 
   const associations = {
     1: "Processed: First text",
@@ -56,7 +57,7 @@ const StatisticsControl = ({
         onDateRangeChange({ start: dateStr, end: endDate });
       }
     },
-    [onDateRangeChange, endDate]
+    [onDateRangeChange, endDate],
   );
 
   const handleEndDateChange = useCallback(
@@ -67,7 +68,7 @@ const StatisticsControl = ({
         onDateRangeChange({ start: startDate, end: dateStr });
       }
     },
-    [onDateRangeChange, startDate]
+    [onDateRangeChange, startDate],
   );
 
   return (
