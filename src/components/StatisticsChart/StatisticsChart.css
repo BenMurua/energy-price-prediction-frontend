@@ -12,13 +12,17 @@
 }
 
 .chart-wrapper .recharts-responsive-container {
-  min-height: 280px;
+  min-height: 180px;
 }
 
 /* Responsive para móviles */
 @media (max-width: 768px) {
   .chart-wrapper {
-    width: calc(100% + 1rem);
-    margin-left: -0.5rem;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .chart-wrapper .recharts-responsive-container {
+    min-height: 180px;
   }
 }

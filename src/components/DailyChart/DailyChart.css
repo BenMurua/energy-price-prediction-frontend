@@ -19,20 +19,24 @@
 }
 
 .chart-wrapper .recharts-responsive-container {
-  min-height: 300px;
+  min-height: 200px;
 }
 
 /* Responsive para móviles */
 @media (max-width: 768px) {
   .daily-chart-container {
-    margin: 1rem auto;
-    padding: 1rem;
+    margin: 0.5rem auto;
+    padding: 0.5rem;
     border-radius: 8px;
   }
 
   .chart-wrapper {
-    width: calc(100% + 1rem);
-    margin-left: -0.5rem;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .chart-wrapper .recharts-responsive-container {
+    min-height: 180px;
   }
 }
 

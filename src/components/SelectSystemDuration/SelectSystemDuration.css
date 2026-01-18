@@ -37,15 +37,31 @@
 @media (max-width: 768px) {
   .select-system-duration-container {
     margin-right: 0;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
   }
 
   .select-system-duration-label {
-    font-size: 1rem;
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
   }
 
   .select-system-duration-select {
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .select-system-duration-container {
+    margin-bottom: 0.5rem;
+  }
+
+  .select-system-duration-label {
+    font-size: 0.8rem;
+  }
+
+  .select-system-duration-select {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.85rem;
   }
 }

@@ -46,13 +46,16 @@ export default function DailyChart({
   const getChartHeight = () => {
     if (typeof window !== "undefined") {
       return window.innerWidth <= 480
-        ? 280
+        ? 220
         : window.innerWidth <= 768
-          ? 350
+          ? 280
           : 500;
     }
     return 500;
   };
+
+  // Detectar si es móvil para ajustar márgenes
+  const isMobile = typeof window !== "undefined" && window.innerWidth <= 768;
 
   const [chartHeight, setChartHeight] = React.useState(getChartHeight());
 
@@ -70,10 +73,24 @@ export default function DailyChart({
             ...d,
             price2: data2 && data2[i] ? data2[i].price : null,
           }))}
+          margin={
+            isMobile
+              ? { top: 5, right: 10, left: -15, bottom: 5 }
+              : { top: 5, right: 30, left: 20, bottom: 5 }
+          }
         >
           <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="hour" />
-          <YAxis domain={["auto", "auto"]} unit="€" />
+          <XAxis
+            dataKey="hour"
+            tick={{ fontSize: isMobile ? 10 : 12 }}
+            interval={isMobile ? 3 : 0}
+          />
+          <YAxis
+            domain={["auto", "auto"]}
+            unit="€"
+            tick={{ fontSize: isMobile ? 10 : 12 }}
+            width={isMobile ? 35 : 60}
+          />
           <Tooltip />
           <Legend />
 
