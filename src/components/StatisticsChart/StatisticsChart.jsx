@@ -30,26 +30,14 @@ export default function StatisticsChart({
       }))
     : [];
 
-  const maxLabels = 10;
+  // Detectar si es móvil para ajustar márgenes
+  const isMobile = typeof window !== "undefined" && window.innerWidth <= 768;
+
+  const maxLabels = isMobile ? 5 : 10;
   const interval =
     mergedData.length > maxLabels
       ? Math.floor(mergedData.length / maxLabels)
       : 0;
-
-  // Altura responsiva según el ancho de pantalla
-  const getChartHeight = () => {
-    if (typeof window !== "undefined") {
-      return window.innerWidth <= 480
-        ? 220
-        : window.innerWidth <= 768
-          ? 280
-          : 500;
-    }
-    return 500;
-  };
-
-  // Detectar si es móvil para ajustar márgenes
-  const isMobile = typeof window !== "undefined" && window.innerWidth <= 768;
 
   const [chartHeight, setChartHeight] = React.useState(getChartHeight());
 
