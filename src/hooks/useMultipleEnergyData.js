@@ -1,7 +1,7 @@
 // src/hooks/useMultipleEnergyData.js
 import { useState, useEffect } from "react";
 
-const API_BASE_URL = "https://13.48.252.18/api/v1";
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "/api/v1";
 
 // Función para llamar a la API
 const fetchFromAPI = async (tabla, variable, fecha_inicio, fecha_fin) => {
