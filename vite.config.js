@@ -1,19 +1,25 @@
-import { defineConfig } from 'vite'
+import { defineConfig, loadEnv } from 'vite' // <--- 1. Importas loadEnv
 import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
-export default defineConfig({
-  plugins: [react()],
-  server: {
-    port: 8000,
-    proxy: {
-      // Proxy requests starting with /api to the backend
-      '/api': {
-        target: process.env.VITE_API_TARGET || 'http://127.0.0.1:8001',
-        changeOrigin: true,
-        secure: false,
-        rewrite: (path) => path.replace(/^\/api/, '/api'),
+export default defineConfig(({ mode }) => {
+  // 2. Cargamos las variables del .env según el modo (development/production)
+  // process.cwd() busca el archivo en la raíz del proyecto
+  const env = loadEnv(mode, process.cwd(), '');
+
+  return {
+    plugins: [react()],
+    server: {
+      port: 8001,
+      proxy: {
+        '/api': {
+          // 3. Usamos 'env.VARIABLE' en vez de 'process.env.VARIABLE'
+          target: env.VITE_API_TARGET,
+          changeOrigin: true,
+          secure: false,
+          rewrite: (path) => path.replace(/^\/api/, '/api'),
+        },
       },
     },
-  },
+  }
 })
