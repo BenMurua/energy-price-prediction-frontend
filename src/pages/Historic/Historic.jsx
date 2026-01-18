@@ -25,7 +25,7 @@ const Historic = () => {
   const { data, isLoading, error } = useMultipleEnergyData(
     energyConfig.queries,
     apiRange.fecha_inicio,
-    apiRange.fecha_fin
+    apiRange.fecha_fin,
   );
 
   const handleRangeChange = (range) => {
@@ -40,14 +40,15 @@ const Historic = () => {
   return (
     <div className="historic-container">
       <div className="historic-sidebar">
-        <SelectSystemDuration value={duration} onChange={setDuration} />
+        <div className="historic-controls">
+          <DateSelector
+            onChange={handleRangeChange}
+            initialDate={apiRange.fecha_inicio.slice(0, 10)}
+          />
+          <SelectSystemDuration value={duration} onChange={setDuration} />
+        </div>
       </div>
       <div className="historic-chart">
-        <DateSelector
-          onChange={handleRangeChange}
-          initialDate={apiRange.fecha_inicio.slice(0, 10)}
-        />
-
         {isLoading ? (
           <p>{t("historic.loading")}</p>
         ) : error ? (
