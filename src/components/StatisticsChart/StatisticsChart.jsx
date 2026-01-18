@@ -33,7 +33,7 @@ export default function StatisticsChart({
   // Detectar si es móvil para ajustar márgenes
   const isMobile = typeof window !== "undefined" && window.innerWidth <= 768;
 
-  const maxLabels = isMobile ? 5 : 10;
+  const maxLabels = isMobile ? 3 : 10;
   const interval =
     mergedData.length > maxLabels
       ? Math.floor(mergedData.length / maxLabels)
@@ -62,11 +62,11 @@ export default function StatisticsChart({
           <XAxis
             dataKey="date"
             interval={interval}
-            tick={{ fontSize: isMobile ? 9 : 12 }}
+            tick={{ fontSize: isMobile ? 8 : 12 }}
           />
           <YAxis
-            tick={{ fontSize: isMobile ? 10 : 12 }}
-            width={isMobile ? 35 : 60}
+            tick={{ fontSize: isMobile ? 8 : 12 }}
+            width={isMobile ? 45 : 60}
           />
           <Tooltip />
           <Legend />

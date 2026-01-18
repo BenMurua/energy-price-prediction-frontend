@@ -82,14 +82,14 @@ export default function DailyChart({
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis
             dataKey="hour"
-            tick={{ fontSize: isMobile ? 10 : 12 }}
-            interval={isMobile ? 5 : 0}
+            tick={{ fontSize: isMobile ? 9 : 12 }}
+            interval={isMobile ? 7 : 0}
           />
           <YAxis
             domain={["auto", "auto"]}
             unit="€"
-            tick={{ fontSize: isMobile ? 10 : 12 }}
-            width={isMobile ? 35 : 60}
+            tick={{ fontSize: isMobile ? 9 : 12 }}
+            width={isMobile ? 45 : 60}
           />
           <Tooltip />
           <Legend />
