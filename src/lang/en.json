@@ -68,7 +68,9 @@
     "hour": "hour",
     "loading": "Loading historic data...",
     "predictedPrice": "Predicted Price",
-    "realPrice": "Real Price"
+    "realPrice": "Real Price",
+    "chargeLabel": "Charge",
+    "dischargeLabel": "Discharge"
   },
   "statisticsChart": {
   },

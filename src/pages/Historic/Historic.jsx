@@ -59,6 +59,12 @@ const Historic = () => {
             data2={data.realPrice || []}
             chargePeriod={data[`charge${duration}`] || []}
             dischargePeriod={data[`discharge${duration}`] || []}
+            data1Label={t("historic.predictedPrice")}
+            data2Label={t("historic.realPrice")}
+            chargeLabel={t("historic.chargeLabel")}
+            dischargeLabel={t("historic.dischargeLabel")}
+            optimalChargeLabel={t("historic.optimalChargeLabel")}
+            optimalDischargeLabel={t("historic.optimalDischargeLabel")}
           />
         )}
       </div>

@@ -124,6 +124,10 @@ const Prediction = () => {
             dischargePeriod={data[`discharge${duration}`] || []}
             data1Label={t("prediction.predictedPrice")}
             data2Label={t("prediction.realPrice")}
+            chargeLabel={t("prediction.chargeLabel")}
+            dischargeLabel={t("prediction.dischargeLabel")}
+            optimalChargeLabel={t("prediction.optimalChargeLabel")}
+            optimalDischargeLabel={t("prediction.optimalDischargeLabel")}
           />
         )}
       </div>
